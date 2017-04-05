@@ -1,12 +1,18 @@
 {
-  "name": "project",
-  "description": "projeto final certificação bootstrap",
-  "main": "index.js",
+  "name": "certificacaobootstrap",
+  "description": "projeto final do curso de Bootstrap",
+  "main": "gulpfile.js",
   "authors": [
     "Keven Jesus"
   ],
-  "license": "ISC",
-  "homepage": "",
+  "license": "MIT",
+  "keywords": [
+    "curso",
+    "bootstrap",
+    "keven",
+    "certificação"
+  ],
+  "homepage": "https://github.com/kevenjesus/projeto-final-certificacao-bootstrap",
   "ignore": [
     "**/.*",
     "node_modules",

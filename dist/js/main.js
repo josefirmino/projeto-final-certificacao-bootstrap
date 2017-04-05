@@ -1,1 +1,0 @@
-!function(n){"use strict";function o(){n("html").addClass("open-sidebar")}function t(){n("html").removeClass("open-sidebar")}n("html, body").on("click",function(n){n.target===document.documentElement&&t()}),n(".js-open-offcanvas").on("click",function(){o()})}(jQuery);
