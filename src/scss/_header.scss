@@ -1,0 +1,51 @@
+// header 
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	height: 70px;
+	background-color: #fff;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,.3);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.timer,
+	.avatar,
+	.menu-bar {
+		display: flex;
+		padding:0 1rem;
+	}
+	.avatar {
+		justify-content: flex-end;
+		flex: 1;
+	}
+	.timer,
+	.menu-bar {
+		align-items: center;
+	}
+	.timer .timer-item {
+		margin-left: .3rem;
+		.first,
+		.last {
+			font-size: .9rem;
+		}
+		.first {
+			color: #fc8f3e;
+		}
+	}
+
+	@media (min-width: 767px) and (max-width: 1024px) {
+		.container {
+			width: 100%;
+		}
+	}
+
+	@include media-breakpoint-up('lg') {
+		.menu-bar {
+			display: none;
+		}
+	}
+
+}

@@ -1,0 +1,123 @@
+@import "../components/bootstrap/scss/variables";
+@import "../components/bootstrap/scss/mixins";
+@import "../components/bootstrap/scss/normalize";
+@import "../components/bootstrap/scss/reboot";
+@import "../components/bootstrap/scss/images";
+@import "../components/bootstrap/scss/nav";
+@import "../components/bootstrap/scss/card";
+@import "../components/bootstrap/scss/utilities/flex";
+@import "../components/bootstrap/scss/utilities/text";
+@import "../components/components-font-awesome/scss/font-awesome";
+
+body {
+	padding-top: 80px;
+}
+
+.container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+.row {
+	@include make-row();
+}
+
+@include make-grid-columns();
+
+// sidebar 
+@import "sidebar";
+
+// header
+@import "header";
+
+.card {
+	box-shadow: 0 0 20px -2px rgba(0,0,0,.3);
+	margin-bottom: 2rem;
+	.card-title {
+		font-style: normal;
+	}
+}
+
+.label {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	
+	&.orange {
+		background-color: #fc8f3e; 
+	}
+
+	&.blue {
+		background-color: #73bef2;
+	}
+
+	&.navyblue {
+		background-color: #293541;
+	}
+}
+
+.graph,
+.infos {
+	flex: 1;
+	display: flex;
+}
+.graph {
+	justify-content: center;
+	.fa {
+		color: #fc8f3e;
+	}
+}
+
+.infos {
+	@include media-breakpoint-down('sm') {
+		flex-direction: column;
+	}
+	
+}
+
+.user-info {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	.user-item {
+		margin-right: .5rem;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		font-size: 1.2rem;
+		.blue,
+		.orange {
+			font-size: 1.5rem;
+		}
+		.blue {
+			color: #73bef2;
+		}
+		.orange {
+			color: #fc8f3e;
+		}
+	}
+}
+
+.content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@include media-breakpoint-up('lg') {
+	.info-item {
+		margin-right: 1rem;
+	}
+	.height-equal {
+		height: 390px;
+	}
+	.contractors,
+	.invoice {
+		height: 400px;
+	}
+
+	.content {
+		width: 88%;
+		padding: 0;
+		margin-left: 150px;
+		margin-right: 0;
+	}
+}
